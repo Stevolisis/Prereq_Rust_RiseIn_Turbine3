@@ -2,7 +2,6 @@
 ```bash 
 https://explorer.solana.com/tx/5dziqBf2JEVWY7uDRQa6i5hYpLKNhJt1rXSKDBQVYT15bZyWjcoLxDkYBbULKqt8LBHSvcDPuvtEBEY9r252Xzqg/?cluster=devnet
 ```
-
 # Prerequisites: PreReq Rust Program from Turbine3
 
 ## Overview
@@ -18,28 +17,30 @@ coding skills.
 
 1. **Clone the Repository**:
    ```bash
-   git clone git@github.com:Stevolisis/turbin3-steven-joseph-final-project.git
+   git clone git@github.com:Stevolisis/Prereq_Rust_RiseIn_Turbine3.git
     ```
     ```bash 
-    cd turbin3-steven-joseph-final-project
+    cd Prereq_Rust_RiseIn_Turbine3
     ```
 
-2. **Install Repo**:
+2. **Generate your wallet.json**:
    ```bash
-   cargo build
+    cargo test keygen -- --nocapture
     ```
 
-3. **Generate your wallet.json**:
-   ```bash
-   solana-keygen new --outfile dev-wallet.json
-    ```
+3. **Request SOL using you wallet public key**:
+  ```bash 
+  cargo test airdrop -- --nocapture
+  ```
 
-4. **Request SOL using you wallet public key**:
-   Head to https://faucet.solana.com and request SOL
+4. **Transfer SOL using you wallet public key**:
+  ```bash 
+  cargo test transfer_all_sol -- --nocapture
+  ```
 
-5. **Run the Enrollment Script**:
+5. **Submit prereq**:
    ```bash
-   yarn ts-node enroll.ts
+    cargo test complete_prereq -- --nocapture
     ```
 
 6. **Expected Output**:
